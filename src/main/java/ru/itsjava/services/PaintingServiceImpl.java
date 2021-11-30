@@ -15,6 +15,7 @@ public class PaintingServiceImpl implements PaintingService {
         for (Painting painting : paintingsFromStore) {
             if (painting.getTitle().equals(name)) {
                 resPainting = painting;
+                break;
             }
         }
         if (resPainting != null) {

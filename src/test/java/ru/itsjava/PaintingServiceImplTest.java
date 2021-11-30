@@ -29,8 +29,9 @@ public class PaintingServiceImplTest {
     @Test
     public void shouldHaveCorrectMethodPutPainting(){
         Painting expectedPainting = new Painting(DEFAULT_TITLE, DEFAULT_CREATOR);
-        paintingList.add(expectedPainting);
-
+//        paintingList.add(expectedPainting);
+        PaintingService service = new PaintingServiceImpl(paintingList);
+        service.putPainting(expectedPainting);
         Assertions.assertEquals(expectedPainting, paintingList.get(0));
     }
 
